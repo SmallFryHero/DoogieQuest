@@ -14,7 +14,7 @@ exports.SUPERZONEDATA = [
                 name: 'Turnip Farm',
                 description: "A good place for apprentice farmers to learn the ways of\n            the land - turnips are a pretty forgiving crop.",
                 actions: [
-                    { vb: "pull", obj: "a turnip", skills: index_1.SkillType.Farming },
+                    { vb: "pull", obj: "a turnip", skills: index_1.SkillType.Play },
                     { vb: "pull", obj: "a HUGE turnip", skills: index_1.SkillType.Farming, bonusLevel: 1 },
                 ],
                 difficulty: 0,
