@@ -14,7 +14,7 @@ exports.SUPERZONEDATA = [
                 name: 'Living Room',
                 description: "A big scary room where you can get attacked from three point of entries.",
                 actions: [
-                    { vb: "", obj: "Cowering in safe bed.", skills: index_1.SkillType.Cower },
+                    { obj: "Cowering in safe bed.", skills: index_1.SkillType.Cower },
                     { vb: "", obj: "Taking a poop on the carpet while everyones asleep.", skills: index_1.SkillType.Pee, bonusLevel: 1 },
                 ],
                 difficulty: 0,
@@ -24,9 +24,9 @@ exports.SUPERZONEDATA = [
                 description: "A cozy place to hide from the world.",
                 actions: [
                     { vb: "", obj: "Chilling in bed with Gina.",
-                        skills: index_1.SkillType.Survival, weight: .8 },
+                        skills: index_1.SkillType.Cuddle, weight: .8 },
                     { vb: "", obj: "Playing with my toy.", 
-                        skills: index_1.SkillType.Combat, weight: .2 },
+                        skills: index_1.SkillType.Play, weight: .2 },
                     { vb: "", obj: "Who the hell is that!?", oneShot: action_oneshots_enum_1.OneShotAction.WoodsmanFreed,
                         bonusLevel: 2, skills: index_1.SkillType.Survival }
                 ],
@@ -45,76 +45,72 @@ exports.SUPERZONEDATA = [
             },
             {
                 name: 'Gaming Room',
-                description: 'Row upon row of pretty, pretty flowers',
+                description: 'Where Paul spends all his time and sometimes Gina locks me in with him.',
                 actions: [
-                    { vb: 'plant', obj: 'some __X', opts: FLOWERS, skills: index_1.SkillType.Farming,
+                    { vb: 'plant', obj: 'Keeping an eye on Paul.', skills: index_1.SkillType.Cower,
                         difficulty: zones_data_defns_1.additiveOverride(9) },
-                    { vb: 'pick', obj: 'a bouquet of __X', opts: FLOWERS, skills: [index_1.SkillType.Farming, index_1.SkillType.Charm] },
-                    { vb: 'tiptoe', obj: 'through the tulips', skills: index_1.SkillType.Stealth,
+                    { vb: 'pick', obj: 'Sitting in Ginas lap while she plays',  skills: [index_1.SkillType.Cuddle, index_1.SkillType.Play] },
+                    { vb: 'tiptoe', obj: 'Getting a treat for being a good boy', skills: index_1.SkillType.Nom,
                         bonusLevel: .5, difficulty: zones_data_defns_1.additiveOverride(-1) },
                 ],
                 difficulty: 4,
             },
         ] },
     {
-        name: 'Village',
+        name: 'Outside',
         minLevel: 5,
         zones: [
             {
-                name: 'Chapel',
-                description: 'A place of worship',
+                name: 'Courtyard',
+                description: 'A nice place to walk around. Not for too long though...',
                 actions: [
                     { vb: "pray", obj: "", skills: index_1.SkillType.Piety },
                 ],
                 difficulty: 4,
             },
             {
-                name: 'General Store',
-                description: 'A generally good place to steal',
+                name: 'Dog Park',
+                description: 'A safe space to run around, although you can never be too careful.',
                 actions: [
-                    { vb: "nick", obj: "a knicknack", skills: index_1.SkillType.Stealth },
-                    { vb: "nick", obj: "an antique", skills: index_1.SkillType.Stealth, bonusLevel: 1 },
-                    { vb: "nick", obj: "a priceless artifact", skills: index_1.SkillType.Stealth, bonusLevel: 2 },
+                    { vb: "nick", obj: "Chasing a squeaker!", skills: index_1.SkillType.Play },
+                    { vb: "nick", obj: "Listening to street noises while shivering.", skills: index_1.SkillType.Cower, bonusLevel: 1 },
+                    { vb: "nick", obj: "Claiming the dog park as my own.", skills: index_1.SkillType.Pee, bonusLevel: 2 },
                 ],
-                difficulty: 7
+                difficulty: 5
             },
             {
-                name: 'Tavern',
-                description: 'A place of merriment. And occasional brawls.',
+                name: 'City',
+                description: 'A big, loud, scary place.',
                 actions: [
-                    { vb: "dance", obj: "a jig", skills: index_1.SkillType.Charm, weight: 1 },
-                    { vb: "play", obj: "darts", skills: index_1.SkillType.Charm, weight: 1 },
-                    { vb: "sing", obj: "some epic karaoke", skills: index_1.SkillType.Charm, bonusLevel: 1 },
-                    { vb: "fight", obj: "a drunken patron", skills: index_1.SkillType.Combat, weight: 1 },
+                    { vb: "dance", obj: "Walking to a big grassy area.", skills: index_1.SkillType.Run, weight: 1 },
+                    { vb: "play", obj: "Going to a resteraunt", skills: index_1.SkillType.Nom, weight: 1 },
+                    { vb: "sing", obj: "Playing at a dog park", skills: index_1.SkillType.Play, bonusLevel: 1 },
+        
                 ],
-                difficulty: 10,
+                difficulty: 7,
             },
             {
-                name: 'Tournament',
-                description: 'A local jousting competition',
+                name: 'Car Ride',
+                description: 'Who knows where were going...',
                 actions: [
-                    { vb: "joust", obj: "in an exhibition match",
-                        skills: [index_1.SkillType.Riding, index_1.SkillType.Charm], weight: 3.0 },
-                    { vb: "joust", obj: "in a qualifying match",
-                        skills: [index_1.SkillType.Riding, index_1.SkillType.Charm], bonusLevel: .3 },
-                    { vb: "joust", obj: "in a quarterfinal match",
-                        skills: [index_1.SkillType.Riding, index_1.SkillType.Charm], bonusLevel: 1 },
-                    { vb: "joust", obj: "in a semifinal match",
-                        skills: [index_1.SkillType.Riding, index_1.SkillType.Charm], bonusLevel: 2 },
-                    { vb: "joust", obj: "in the *grand final* match",
-                        skills: [index_1.SkillType.Riding, index_1.SkillType.Charm], bonusLevel: 3,
+                    { vb: "joust", obj: "Visiting someone. I dont trust them.",
+                        skills: [index_1.SkillType.Sniff, index_1.SkillType.Cower], weight: 3.0 },
+                    { vb: "joust", obj: "Going out to eat.",
+                        skills: [index_1.SkillType.Nom, index_1.SkillType.Cower], bonusLevel: .3 },
+                    { vb: "joust", obj: "Backpacking for miles and miles. Its hot out.",
+                        skills: [index_1.SkillType.Run, index_1.SkillType.Play], bonusLevel: 2,
                         unlocks: index_2.NamedUnlock.JoustingChampion, oneShot: action_oneshots_enum_1.OneShotAction.TournamentFinals },
                 ],
-                difficulty: 12,
+                difficulty: 9,
             }
         ]
     },
     {
-        name: 'Cave Complex',
-        minLevel: 12,
+        name: 'Carlotta',
+        minLevel: 10,
         zones: [
             {
-                name: 'Mushroom Cave',
+                name: 'Bedroom',
                 description: 'A grotto where mycologists cultivate mushrooms with curative, poisonous, or psychedelic properties',
                 actions: [
                     { vb: 'collect', obj: 'a mushroom', skills: [index_1.SkillType.Farming, index_1.SkillType.Intellect] },
@@ -122,10 +118,10 @@ exports.SUPERZONEDATA = [
                         opts: ["sleep", "dizziness", "wart removal", "blindness", "cheer"],
                         skills: [index_1.SkillType.Intellect] }
                 ],
-                difficulty: 14,
+                difficulty: 12,
             },
             {
-                name: 'Deep Cave',
+                name: 'Living Room',
                 description: 'This place is dangerous',
                 actions: [
                     { vb: 'crawl', obj: 'through a narrow passage', skills: [index_1.SkillType.Survival] },
@@ -135,10 +131,10 @@ exports.SUPERZONEDATA = [
                         skills: [index_1.SkillType.Survival], bonusLevel: .5, weight: 0.001 },
                     { vb: 'swim', obj: 'through a sump', skills: [index_1.SkillType.Survival], bonusLevel: 1 },
                 ],
-                difficulty: 16,
+                difficulty: 13,
             },
             {
-                name: 'Bat Cave',
+                name: 'Backyard',
                 description: "These bats haven't been doing anyone harm, but I guess you\n        could slaughter them anyways for practice",
                 actions: [
                     { vb: 'slay', obj: 'a fruit bat', skills: [index_1.SkillType.Combat] },
@@ -146,10 +142,10 @@ exports.SUPERZONEDATA = [
                     { vb: 'slay', obj: 'the Bat King', skills: [index_1.SkillType.Combat],
                         bonusLevel: 2, weight: .05, oneShot: action_oneshots_enum_1.OneShotAction.BatKing }
                 ],
-                difficulty: 18,
+                difficulty: 14,
             },
             {
-                name: 'Haunted Cave',
+                name: 'Go for a Ride',
                 description: "Townsfolk steer clear of this cave. Local legend says that it's spooky.",
                 actions: [
                     { vb: 'light', obj: 'some incense', skills: index_1.SkillType.Piety },
@@ -158,20 +154,20 @@ exports.SUPERZONEDATA = [
                     { vb: 'exorcise', obj: 'an ancient, unspeakable horror',
                         skills: [index_1.SkillType.Piety, index_1.SkillType.Combat], bonusLevel: 1.5 },
                 ],
-                difficulty: 19,
+                difficulty: 15,
             }
         ]
     },
     {
-        name: 'City',
-        minLevel: 20,
+        name: '4115 19th',
+        minLevel: 15,
         zones: [
             {
                 /** This could be interesting as a 'rainbow' zone. Read a book about
                     plants/martial strategy/religion/whatever, and gain SP in the
                     corresponding skill + intellect.
                 **/
-                name: 'Library',
+                name: 'Bedroom',
                 description: 'A good place to get smarter and practice being quiet',
                 actions: [
                     { vb: "ponder", obj: "a quaint and curious volume of forgotten lore",
@@ -181,10 +177,10 @@ exports.SUPERZONEDATA = [
                         skills: [index_1.SkillType.Intellect, index_1.SkillType.Stealth],
                         skillRatios: { 'Intellect': .8, 'Stealth': .2 } },
                 ],
-                difficulty: 22,
+                difficulty: 17,
             },
             {
-                name: 'Botanical Garden',
+                name: 'Leave the Bedroom',
                 description: "A showcase of rare and exotic plants",
                 actions: [
                     { vb: "bask", obj: "in the sun", skills: index_1.SkillType.Charm, weight: .2 },
@@ -195,10 +191,10 @@ exports.SUPERZONEDATA = [
                     { vb: "chat", obj: "with the head gardener", skills: [index_1.SkillType.Farming, index_1.SkillType.Charm],
                         bonusLevel: 1.5 }
                 ],
-                difficulty: 25,
+                difficulty: 19,
             },
             {
-                name: 'Colloseum',
+                name: 'Outside',
                 description: "A violent but popular local spectacle. Successful gladiators\n        are handy with a sword and know how to razzle-dazzle the crowd.",
                 actions: [
                     { vb: "fight", obj: "a gladiator", skills: [index_1.SkillType.Combat] },
@@ -208,10 +204,10 @@ exports.SUPERZONEDATA = [
                     { vb: "bask", obj: "in the crowd's adoration", skills: index_1.SkillType.Charm,
                         bonusLevel: 1 }
                 ],
-                difficulty: 28,
+                difficulty: 21,
             },
             {
-                name: 'Cathedral',
+                name: 'Car Ride',
                 description: 'Nice stained glass',
                 actions: [
                     { vb: "sermonize", obj: "", skills: [index_1.SkillType.Piety, index_1.SkillType.Charm] },
@@ -219,7 +215,7 @@ exports.SUPERZONEDATA = [
                     { vb: "harmonize", obj: "", skills: [index_1.SkillType.Charm] },
                     { vb: "eulogize", obj: "", skills: [index_1.SkillType.Piety, index_1.SkillType.Charm], bonusLevel: 1.5 },
                 ],
-                difficulty: 31,
+                difficulty: 23,
             }
         ]
     },
@@ -231,75 +227,20 @@ exports.SUPERZONEDATA = [
     // ]
     // },
     {
-        name: 'Hinterlands',
-        minLevel: 50,
-        zones: [
-            {
-                name: 'Bandit Camp',
-                description: "These bandits have been accosting travelers and generally\n        acting like jerks",
-                actions: [
-                    { vb: 'apprehend', obj: "a bandit", skills: [index_1.SkillType.Combat] },
-                    { vb: 'steal', obj: "stolen goods", skills: [index_1.SkillType.Stealth] },
-                    { vb: 'assassinate', obj: "the Chief Bandit",
-                        skills: [index_1.SkillType.Stealth, index_1.SkillType.Combat], bonusLevel: 3, oneShot: action_oneshots_enum_1.OneShotAction.BanditChief },
-                ],
-                difficulty: 50,
-            },
-            {
-                name: 'Gryphon Nest',
-                description: 'Scouts spotted the nest of a great gryphon on a mountain top',
-                actions: [
-                    { vb: "climb", obj: "", skills: index_1.SkillType.Survival, weight: 1.0 },
-                    { vb: "sneak", obj: "an egg out of the nest", skills: index_1.SkillType.Stealth, weight: .2 },
-                    { vb: "ride", obj: "a great gryphon", skills: index_1.SkillType.Riding, bonusLevel: 2 },
-                    { vb: "sneak", obj: "a golden egg", skills: index_1.SkillType.Stealth, bonusLevel: 3,
-                        oneShot: action_oneshots_enum_1.OneShotAction.GoldenEgg },
-                ],
-                difficulty: 55,
-            },
-            {
-                name: 'Ancient Ruins',
-                description: 'Ruins left by an ancient civilization',
-                actions: [
-                    { vb: "disarm", obj: "a booby trap", skills: index_1.SkillType.Survival },
-                    { vb: "decode", obj: "some ancient glyphs", skills: index_1.SkillType.Intellect },
-                    { vb: "deface", obj: "an altar to a pagan god", skills: index_1.SkillType.Piety,
-                        bonusLevel: 1 },
-                    { vb: "unlock", obj: "the secrets of the Jade McGuffin", skills: index_1.SkillType.Intellect,
-                        bonusLevel: 3, oneShot: action_oneshots_enum_1.OneShotAction.McMuffin },
-                ],
-                difficulty: 60,
-            },
-            {
-                name: 'Goblin Outpost',
-                description: 'Smells awful',
-                actions: [
-                    { vb: "slay", obj: "a goblin", skills: index_1.SkillType.Combat },
-                    { vb: "slay", obj: "a goblin lieutenant", skills: index_1.SkillType.Combat, bonusLevel: 1 },
-                    { vb: "slay", obj: "the Goblin King", skills: index_1.SkillType.Combat, bonusLevel: 3,
-                        oneShot: action_oneshots_enum_1.OneShotAction.GoblinKing },
-                ],
-                difficulty: 65,
-            }
-        ]
-    },
-    {
         name: 'Beyond',
-        minLevel: 99,
+        minLevel: 25,
         zones: [
             {
-                name: 'Crack in Spacetime',
-                description: "Some chronomancers had a teensy accident and may have" +
-                    " created a bit of a singularity-type situation. It'll take a very " +
-                    "seasoned hero to get through this.",
+                name: 'Adventuring in the world.',
+                description: "The world doesnt seem all that scary after all I guess.",
                 actions: [
                     { vb: 'beat', obj: 'the game', skills: [
-                            index_1.SkillType.Farming, index_1.SkillType.Combat, index_1.SkillType.Survival, index_1.SkillType.Charm, index_1.SkillType.Stealth, index_1.SkillType.Riding,
-                            index_1.SkillType.Intellect, index_1.SkillType.Piety],
+                            index_1.SkillType.Play, index_1.SkillType.Sniff, index_1.SkillType.Pee, index_1.SkillType.Cuddle, index_1.SkillType.Kill, index_1.SkillType.Cower,
+                            index_1.SkillType.Run, index_1.SkillType.Nom],
                         unlocks: index_2.NamedUnlock.SpaceTimeConquered
                     }
                 ],
-                difficulty: 100
+                difficulty: 30
             }
         ]
     },
