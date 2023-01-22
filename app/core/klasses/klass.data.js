@@ -30,7 +30,7 @@ exports.KLASSES = [
         criteria: function (s) { return true; }
     },    
     {
-        name: 'Woodsman',
+        name: 'Fawnsy',
         aptitudes: index_1.mostlyUniformSkillMap(t1_apt, (_b = {},
             _b[index_1.SkillType.Survival] = 2.0,
             _b[index_1.SkillType.Farming] = 1.0,
