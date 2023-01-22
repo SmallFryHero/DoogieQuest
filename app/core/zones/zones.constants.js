@@ -199,7 +199,7 @@ exports.SUPERZONEDATA = [
             },
             {
                 name: 'Car Ride',
-                description: 'Nice stained glass',
+                description: 'We could be going anywhere',
                 actions: [
                     { vb: "", obj: "Going to doggy social", skills: [index_1.SkillType.Cower, index_1.SkillType.Play] },
                     { vb: "", obj: "Found a stranger with a treat", skills: [index_1.SkillType.Cower, index_1.SkillType.Nom] },           
