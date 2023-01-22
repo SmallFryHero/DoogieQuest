@@ -1,6 +1,6 @@
 "use strict";
 (function (SkillType) {
-    SkillType[SkillType["Farming"] = 0] = "Farming";
+    SkillType[SkillType["Farming"] = 0] = "Play";
     SkillType[SkillType["Combat"] = 1] = "Combat";
     SkillType[SkillType["Survival"] = 2] = "Survival";
     SkillType[SkillType["Charm"] = 3] = "Charm";
