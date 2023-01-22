@@ -1,5 +1,5 @@
 export enum SkillType {
-    Farming = 0,
+    Play = 0,
     Combat,
     Survival,
 
