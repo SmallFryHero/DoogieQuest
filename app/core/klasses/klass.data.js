@@ -23,7 +23,7 @@ function classLevelUnlockFactory(klass, level) {
 exports.KLASSES = [
     {
         // perk: double apts until level 10
-        name: 'Peasant',
+        name: 'Doogler',
         aptitudes: index_1.uniformSkillMap(.5),
         img: 'ruffian.png',
         hint: "??? You shouldn't be reading this...",
