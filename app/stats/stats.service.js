@@ -31,7 +31,7 @@ var StatsService = (function () {
         var stats = {
             simpleStats: new Array(),
             unlocks: new Array(),
-            klassUnlocks: { 'Peasant': true },
+            klassUnlocks: { 'Doogler': true },
             klassLevels: {},
             skillLevels: index_1.uniformSkillMap(0),
             actionStats: {},
