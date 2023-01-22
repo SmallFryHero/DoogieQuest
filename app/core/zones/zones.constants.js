@@ -7,44 +7,44 @@ var CHEAT_POINTS = 5000;
 var FLOWERS = ["poppies", "daisies", "roses", "orchids", "violets", "begonias"];
 exports.SUPERZONEDATA = [
     {
-        name: 'Fields',
+        name: 'Apt 3401',
         minLevel: 0,
         zones: [
             {
-                name: 'Turnip Farm',
-                description: "A good place for apprentice farmers to learn the ways of\n            the land - turnips are a pretty forgiving crop.",
+                name: 'Living Room',
+                description: "A big scary room where you can get attacked from three point of entries.",
                 actions: [
-                    { vb: "pull", obj: "a turnip", skills: index_1.SkillType.Play },
-                    { vb: "pull", obj: "a HUGE turnip", skills: index_1.SkillType.Farming, bonusLevel: 1 },
+                    { vb: "", obj: "Cowering in safe bed.", skills: index_1.SkillType.Cower },
+                    { vb: "", obj: "Taking a poop on the carpet while everyones asleep.", skills: index_1.SkillType.Pee, bonusLevel: 1 },
                 ],
                 difficulty: 0,
             },
             {
-                name: 'Woody Woods',
-                description: "A small forest where locals go to collect firewood.\n        Watch out for critters.",
+                name: 'Bedroom',
+                description: "A cozy place to hide from the world.",
                 actions: [
-                    { vb: "chop", obj: "__X", opts: ["an oak", "a spruce", "a pine"],
+                    { vb: "", obj: "Chilling in bed with Gina.",
                         skills: index_1.SkillType.Survival, weight: .8 },
-                    { vb: "ax", obj: "a __X", opts: ["rat", "rabid deer", "badger", "spider"],
+                    { vb: "", obj: "Playing with my toy.", 
                         skills: index_1.SkillType.Combat, weight: .2 },
-                    { vb: "free", obj: "the woodsman from a trap", oneShot: action_oneshots_enum_1.OneShotAction.WoodsmanFreed,
+                    { vb: "", obj: "Who the hell is that!?", oneShot: action_oneshots_enum_1.OneShotAction.WoodsmanFreed,
                         bonusLevel: 2, skills: index_1.SkillType.Survival }
                 ],
                 difficulty: 1,
             },
             {
-                name: 'Stables',
-                description: "If Hercules wasn't too good to clean stables, then neither\n        are you",
+                name: 'Kitchen',
+                description: "A place with lots of yummy treats, but not a lot of space to retreat.",
                 actions: [
-                    { vb: "ride", obj: "a steed", skills: index_1.SkillType.Riding, weight: 1, difficulty: zones_data_defns_1.additiveOverride(-1) },
-                    { vb: "drive", obj: "a plough", skills: [index_1.SkillType.Riding, index_1.SkillType.Farming],
+                    { vb: "", obj: "Getting a treat from the fridge", skills: index_1.SkillType.Nom, weight: 1, difficulty: zones_data_defns_1.additiveOverride(-1) },
+                    { vb: "", obj: "Chasing a treat Gina threw.", skills: [index_1.SkillType.Kill, index_1.SkillType.Nom],
                         weight: 1, difficulty: zones_data_defns_1.additiveOverride(-1) },
-                    { vb: "bale", obj: "some hay", skills: index_1.SkillType.Farming, weight: 1 }
+                    { vb: "", obj: "Ahh! running away before I get trapped.", skills: index_1.SkillType.Cower, weight: 1 }
                 ],
                 difficulty: 3,
             },
             {
-                name: 'Flower Fields',
+                name: 'Gaming Room',
                 description: 'Row upon row of pretty, pretty flowers',
                 actions: [
                     { vb: 'plant', obj: 'some __X', opts: FLOWERS, skills: index_1.SkillType.Farming,
