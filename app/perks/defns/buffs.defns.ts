@@ -46,7 +46,7 @@ export class Fruity extends AbstractTimedBuff {
             case SkillType.Combat:
                 g = "wrath";
                 break;
-            case SkillType.Farming:
+            case SkillType.Play:
                 g = "agriculture";
                 break;
             case SkillType.Survival:
