@@ -16,7 +16,7 @@ var KlassService = (function () {
     function KlassService(stats, Toasts) {
         this.stats = stats;
         this.Toasts = Toasts;
-        this.starterKlass = "Peasant";
+        this.starterKlass = "Doogler";
         this.klassMap = {};
         for (var _i = 0, KLASSES_1 = index_1.KLASSES; _i < KLASSES_1.length; _i++) {
             var klass = KLASSES_1[_i];
@@ -89,7 +89,7 @@ var KlassService = (function () {
             if (didUnlock) {
                 console.log("Wow!! Unlocked " + klass.name);
                 this.stats.setClassUnlocked(klass.name);
-                if (klass.name != "Peasant") {
+                if (klass.name != "Doogler") {
                     this.klassUnlockToast(klass);
                 }
                 klass.progress = undefined;
