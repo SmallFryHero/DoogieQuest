@@ -20,7 +20,7 @@ zones:
         description: `A good place for apprentice farmers to learn the ways of
             the land - turnips are a pretty forgiving crop.`,
         actions: [
-            {vb: "pull", obj:"a turnip", skills: S.Farming},
+            {vb: "pull", obj:"a turnip", skills: S.Play},
             {vb: "pull", obj:"a HUGE turnip", skills: S.Farming, bonusLevel: 1},
         ],
         difficulty: 0,
