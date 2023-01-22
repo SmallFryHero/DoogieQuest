@@ -1,14 +1,14 @@
 export enum SkillType {
     Play = 0,
-    Combat,
-    Survival,
+    Sniff,
+    Pee,
 
-    Charm,
-    Stealth,
+    Cuddle,
+    Kill,
 
-    Riding,
-    Intellect,
-    Piety,
+    Cower,
+    Cower,
+    Run,
     MAX,
 }
 
