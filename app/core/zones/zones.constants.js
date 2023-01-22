@@ -47,10 +47,10 @@ exports.SUPERZONEDATA = [
                 name: 'Gaming Room',
                 description: 'Where Paul spends all his time and sometimes Gina locks me in with him.',
                 actions: [
-                    { vb: 'plant', obj: 'Keeping an eye on Paul.', skills: index_1.SkillType.Cower,
+                    { vb: '', obj: 'Keeping an eye on Paul.', skills: index_1.SkillType.Cower,
                         difficulty: zones_data_defns_1.additiveOverride(9) },
-                    { vb: 'pick', obj: 'Sitting in Ginas lap while she plays',  skills: [index_1.SkillType.Cuddle, index_1.SkillType.Play] },
-                    { vb: 'tiptoe', obj: 'Getting a treat for being a good boy', skills: index_1.SkillType.Nom,
+                    { vb: '', obj: 'Sitting in Ginas lap while she plays',  skills: [index_1.SkillType.Cuddle, index_1.SkillType.Play] },
+                    { vb: '', obj: 'Getting a treat for being a good boy', skills: index_1.SkillType.Nom,
                         bonusLevel: .5, difficulty: zones_data_defns_1.additiveOverride(-1) },
                 ],
                 difficulty: 4,
@@ -64,7 +64,7 @@ exports.SUPERZONEDATA = [
                 name: 'Courtyard',
                 description: 'A nice place to walk around. Not for too long though...',
                 actions: [
-                    { vb: "pray", obj: "", skills: index_1.SkillType.Piety },
+                    { vb: "", obj: "Taking a walk around the complex", skills: index_1.SkillType.Run },
                 ],
                 difficulty: 4,
             },
@@ -72,9 +72,9 @@ exports.SUPERZONEDATA = [
                 name: 'Dog Park',
                 description: 'A safe space to run around, although you can never be too careful.',
                 actions: [
-                    { vb: "nick", obj: "Chasing a squeaker!", skills: index_1.SkillType.Play },
-                    { vb: "nick", obj: "Listening to street noises while shivering.", skills: index_1.SkillType.Cower, bonusLevel: 1 },
-                    { vb: "nick", obj: "Claiming the dog park as my own.", skills: index_1.SkillType.Pee, bonusLevel: 2 },
+                    { vb: "", obj: "Chasing a squeaker!", skills: index_1.SkillType.Play },
+                    { vb: "", obj: "Listening to street noises while shivering.", skills: index_1.SkillType.Cower, bonusLevel: 1 },
+                    { vb: "", obj: "Claiming the dog park as my own.", skills: index_1.SkillType.Pee, bonusLevel: 2 },
                 ],
                 difficulty: 5
             },
@@ -82,9 +82,9 @@ exports.SUPERZONEDATA = [
                 name: 'City',
                 description: 'A big, loud, scary place.',
                 actions: [
-                    { vb: "dance", obj: "Walking to a big grassy area.", skills: index_1.SkillType.Run, weight: 1 },
-                    { vb: "play", obj: "Going to a resteraunt", skills: index_1.SkillType.Nom, weight: 1 },
-                    { vb: "sing", obj: "Playing at a dog park", skills: index_1.SkillType.Play, bonusLevel: 1 },
+                    { vb: "", obj: "Walking to a big grassy area.", skills: index_1.SkillType.Run, weight: 1 },
+                    { vb: "", obj: "Going to a resteraunt", skills: index_1.SkillType.Nom, weight: 1 },
+                    { vb: "", obj: "Playing at a dog park", skills: index_1.SkillType.Play, bonusLevel: 1 },
         
                 ],
                 difficulty: 7,
@@ -93,11 +93,11 @@ exports.SUPERZONEDATA = [
                 name: 'Car Ride',
                 description: 'Who knows where were going...',
                 actions: [
-                    { vb: "joust", obj: "Visiting someone. I dont trust them.",
+                    { vb: "", obj: "Visiting someone. I dont trust them.",
                         skills: [index_1.SkillType.Sniff, index_1.SkillType.Cower], weight: 3.0 },
-                    { vb: "joust", obj: "Going out to eat.",
+                    { vb: "", obj: "Going out to eat.",
                         skills: [index_1.SkillType.Nom, index_1.SkillType.Cower], bonusLevel: .3 },
-                    { vb: "joust", obj: "Backpacking for miles and miles. Its hot out.",
+                    { vb: "", obj: "Backpacking for miles and miles. Its hot out.",
                         skills: [index_1.SkillType.Run, index_1.SkillType.Play], bonusLevel: 2,
                         unlocks: index_2.NamedUnlock.JoustingChampion, oneShot: action_oneshots_enum_1.OneShotAction.TournamentFinals },
                 ],
@@ -111,48 +111,45 @@ exports.SUPERZONEDATA = [
         zones: [
             {
                 name: 'Bedroom',
-                description: 'A grotto where mycologists cultivate mushrooms with curative, poisonous, or psychedelic properties',
+                description: 'A secluded bedroom with a huge beg for me to hog.',
                 actions: [
-                    { vb: 'collect', obj: 'a mushroom', skills: [index_1.SkillType.Farming, index_1.SkillType.Intellect] },
-                    { vb: 'concoct', obj: 'a draught of __X',
-                        opts: ["sleep", "dizziness", "wart removal", "blindness", "cheer"],
-                        skills: [index_1.SkillType.Intellect] }
+                    { vb: '', obj: 'Taking a nice nap in the dark.', skills: [index_1.SkillType.Cower] },
+                    { vb: '', obj: 'Snoozin with Gina.',
+                        skills: [index_1.SkillType.Cuddle] }
                 ],
                 difficulty: 12,
             },
             {
                 name: 'Living Room',
-                description: 'This place is dangerous',
+                description: 'A big open room with lots of people walking around',
                 actions: [
-                    { vb: 'crawl', obj: 'through a narrow passage', skills: [index_1.SkillType.Survival] },
-                    { vb: 'dodge', obj: 'a falling stalctite', skills: [index_1.SkillType.Survival],
+                    { vb: '', obj: 'Running to the kitchen for a treat!', skills: [index_1.SkillType.Nom] },
+                    { vb: '', obj: 'Playing with my toy.', skills: [index_1.SkillType.Kill],
                         bonusLevel: .5 },
-                    { vb: 'dodge', obj: "a falling stalagmite. Wait, that's not right, is it?",
-                        skills: [index_1.SkillType.Survival], bonusLevel: .5, weight: 0.001 },
-                    { vb: 'swim', obj: 'through a sump', skills: [index_1.SkillType.Survival], bonusLevel: 1 },
+               
                 ],
                 difficulty: 13,
             },
             {
                 name: 'Backyard',
-                description: "These bats haven't been doing anyone harm, but I guess you\n        could slaughter them anyways for practice",
+                description: "The perfect backyard with lots of smells and no people",
                 actions: [
-                    { vb: 'slay', obj: 'a fruit bat', skills: [index_1.SkillType.Combat] },
-                    { vb: 'slay', obj: 'a vampire bat', skills: [index_1.SkillType.Combat], bonusLevel: .5 },
-                    { vb: 'slay', obj: 'the Bat King', skills: [index_1.SkillType.Combat],
+                    { vb: '', obj: 'Marking my territory.', skills: [index_1.SkillType.Pee] },
+                    { vb: '', obj: 'Checking out a smell.', skills: [index_1.SkillType.Sniff], bonusLevel: .5 },
+                    { vb: '', obj: 'ZOOMIES!', skills: [index_1.SkillType.Run],
                         bonusLevel: 2, weight: .05, oneShot: action_oneshots_enum_1.OneShotAction.BatKing }
                 ],
                 difficulty: 14,
             },
             {
                 name: 'Go for a Ride',
-                description: "Townsfolk steer clear of this cave. Local legend says that it's spooky.",
+                description: "I hope we take the truck, its not as spooky as the car",
                 actions: [
-                    { vb: 'light', obj: 'some incense', skills: index_1.SkillType.Piety },
-                    { vb: 'exorcise', obj: 'a restless spirit', skills: [index_1.SkillType.Piety, index_1.SkillType.Combat],
+                    { vb: '', obj: 'Visiting someones scary house', skills: index_1.SkillType.Cower },
+                    { vb: '', obj: 'Going for a walk somewhere, maybe chasing a ball or two.', skills: [index_1.SkillType.Run, index_1.SkillType.Kill],
                         bonusLevel: .5 },
-                    { vb: 'exorcise', obj: 'an ancient, unspeakable horror',
-                        skills: [index_1.SkillType.Piety, index_1.SkillType.Combat], bonusLevel: 1.5 },
+                    { vb: '', obj: 'Finding new territory to mark',
+                        skills: [index_1.SkillType.Run, index_1.SkillType.Pee], bonusLevel: 1.5 },
                 ],
                 difficulty: 15,
             }
@@ -168,40 +165,34 @@ exports.SUPERZONEDATA = [
                     corresponding skill + intellect.
                 **/
                 name: 'Bedroom',
-                description: 'A good place to get smarter and practice being quiet',
+                description: 'This bed isnt big enough for all of us.',
                 actions: [
-                    { vb: "ponder", obj: "a quaint and curious volume of forgotten lore",
-                        skills: [index_1.SkillType.Intellect, index_1.SkillType.Stealth], bonusLevel: 1,
-                        skillRatios: { 'Intellect': .8, 'Stealth': .2 } },
-                    { vb: "read", obj: "a __X", opts: ["tome", "book", "encyclopedia", "magazine"],
-                        skills: [index_1.SkillType.Intellect, index_1.SkillType.Stealth],
-                        skillRatios: { 'Intellect': .8, 'Stealth': .2 } },
+                    { vb: "", obj: "Being a shaky boy",
+                        skills: [index_1.SkillType.Cower, index_1.SkillType.Stealth], bonusLevel: 1 },
+                    { vb: "", obj: "Getting a treat for being so cute",
+                        skills: [index_1.SkillType.Nom, index_1.SkillType.Cuddle] },
                 ],
                 difficulty: 17,
             },
             {
                 name: 'Leave the Bedroom',
-                description: "A showcase of rare and exotic plants",
+                description: "Theres a whole house on the other side of that door.",
                 actions: [
-                    { vb: "bask", obj: "in the sun", skills: index_1.SkillType.Charm, weight: .2 },
-                    { vb: "inspect", obj: "an unusual cultivar of __X",
-                        opts: ["radish", "turnip", "parsley", "carrot", "pumpkin"],
-                        skills: index_1.SkillType.Farming },
-                    { vb: "pluck", obj: "a weed", skills: index_1.SkillType.Farming },
-                    { vb: "chat", obj: "with the head gardener", skills: [index_1.SkillType.Farming, index_1.SkillType.Charm],
+                    { vb: "", obj: "Going potty outside", skills: index_1.SkillType.Pee, weight: .2 },
+                    { vb: "", obj: "Cuddling Gina upstairs",                     
+                        skills: index_1.SkillType.Cuddle },        
+                    { vb: "", obj: "Chasing squeaks in the garage", skills: [index_1.SkillType.Kill, index_1.SkillType.Play],
                         bonusLevel: 1.5 }
                 ],
                 difficulty: 19,
             },
             {
                 name: 'Outside',
-                description: "A violent but popular local spectacle. Successful gladiators\n        are handy with a sword and know how to razzle-dazzle the crowd.",
+                description: "Pretty big, I guess its not that scary though. Sometimes I even want to go for a walk.",
                 actions: [
-                    { vb: "fight", obj: "a gladiator", skills: [index_1.SkillType.Combat] },
-                    { vb: "ham", obj: "it up for the crowd", skills: [index_1.SkillType.Charm] },
-                    { vb: "fight", obj: "a __X", opts: ["tiger", "lion", "wolf", "boar"],
-                        skills: [index_1.SkillType.Combat], bonusLevel: .5 },
-                    { vb: "bask", obj: "in the crowd's adoration", skills: index_1.SkillType.Charm,
+                    { vb: "", obj: "Going for a walk around the block", skills: [index_1.SkillType.Run] },
+                    { vb: "", obj: "Finding a good poop spot on a walk", skills: [index_1.SkillType.Pee] },                    
+                    { vb: "", obj: "Going to the store", skills: index_1.SkillType.Run,
                         bonusLevel: 1 }
                 ],
                 difficulty: 21,
@@ -210,10 +201,8 @@ exports.SUPERZONEDATA = [
                 name: 'Car Ride',
                 description: 'Nice stained glass',
                 actions: [
-                    { vb: "sermonize", obj: "", skills: [index_1.SkillType.Piety, index_1.SkillType.Charm] },
-                    { vb: "proselytize", obj: "", skills: [index_1.SkillType.Piety, index_1.SkillType.Charm] },
-                    { vb: "harmonize", obj: "", skills: [index_1.SkillType.Charm] },
-                    { vb: "eulogize", obj: "", skills: [index_1.SkillType.Piety, index_1.SkillType.Charm], bonusLevel: 1.5 },
+                    { vb: "", obj: "Going to doggy social", skills: [index_1.SkillType.Cower, index_1.SkillType.Play] },
+                    { vb: "", obj: "Found a stranger with a treat", skills: [index_1.SkillType.Cower, index_1.SkillType.Nom] },           
                 ],
                 difficulty: 23,
             }
