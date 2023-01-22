@@ -1,13 +1,13 @@
 "use strict";
 (function (SkillType) {
     SkillType[SkillType["Play"] = 0] = "Play";
-    SkillType[SkillType["Combat"] = 1] = "Combat";
-    SkillType[SkillType["Survival"] = 2] = "Survival";
-    SkillType[SkillType["Charm"] = 3] = "Charm";
-    SkillType[SkillType["Stealth"] = 4] = "Stealth";
-    SkillType[SkillType["Riding"] = 5] = "Riding";
-    SkillType[SkillType["Intellect"] = 6] = "Intellect";
-    SkillType[SkillType["Piety"] = 7] = "Piety";
+    SkillType[SkillType["Sniff"] = 1] = "Sniff";
+    SkillType[SkillType["Pee"] = 2] = "Pee";
+    SkillType[SkillType["Cuddle"] = 3] = "Cuddle";
+    SkillType[SkillType["Kill"] = 4] = "Kill";
+    SkillType[SkillType["Cower"] = 5] = "Cower";
+    SkillType[SkillType["Run"] = 6] = "Run";
+    SkillType[SkillType["Nom"] = 7] = "Nom";
     SkillType[SkillType["MAX"] = 8] = "MAX";
 })(exports.SkillType || (exports.SkillType = {}));
 var SkillType = exports.SkillType;
