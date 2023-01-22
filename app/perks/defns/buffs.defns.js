@@ -50,7 +50,7 @@ var BUFFS;
                     case index_1.SkillType.Combat:
                         g = "wrath";
                         break;
-                    case index_1.SkillType.Farming:
+                    case index_1.SkillType.Play:
                         g = "agriculture";
                         break;
                     case index_1.SkillType.Survival:
