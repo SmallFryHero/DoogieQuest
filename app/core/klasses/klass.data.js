@@ -23,14 +23,14 @@ function classLevelUnlockFactory(klass, level) {
 exports.KLASSES = [
     {
         // perk: double apts until level 10
-        name: 'Doogie',
+        name: 'Peasant',
         aptitudes: index_1.uniformSkillMap(.5),
         img: 'ruffian.png',
         hint: "??? You shouldn't be reading this...",
         criteria: function (s) { return true; }
     },
     {
-        name: 'Placeholder1',
+        name: 'Farmer',
         aptitudes: index_1.mostlyUniformSkillMap(baseline_apt, (_a = {},
             _a[index_1.SkillType.Farming] = 2.0,
             _a[index_1.SkillType.Survival] = 1.1,
@@ -43,13 +43,13 @@ exports.KLASSES = [
             _a
         )),
         img: 'peasant.png',
-        hint: "Placeholder",
+        hint: "Train your Farming skill",
         criteria: function (s) {
             return s.checkSkillUnlock(index_1.SkillType.Farming, low_skill_lvl);
         }
     },
     {
-        name: 'Placeholder2',
+        name: 'Woodsman',
         aptitudes: index_1.mostlyUniformSkillMap(t1_apt, (_b = {},
             _b[index_1.SkillType.Survival] = 2.0,
             _b[index_1.SkillType.Farming] = 1.0,
@@ -62,29 +62,29 @@ exports.KLASSES = [
             _b
         )),
         img: 'woodsman.png',
-        hint: 'Placeholder',
+        hint: 'Last seen in the woods. Feared missing.',
         criteria: function (s) {
             return s.performedOneShot(index_3.OneShotAction.WoodsmanFreed);
         }
     },
     {
-        name: 'Fawnsy',
+        name: 'Ranger',
         aptitudes: index_1.mostlyUniformSkillMap(t2_apt, (_c = {},
-            _c[index_1.SkillType.Pee] = 1.5,
-            _c[index_1.SkillType.Play] = 2.0,
-            _c[index_1.SkillType.Kill] = .7,
-            _c[index_1.SkillType.Nom] = 1.3,
-            _c[index_1.SkillType.Cuddle] = 1.0,
-            _c[index_1.SkillType.Run] = 1,
-            _c[index_1.SkillType.Sniff] = .5,
+            _c[index_1.SkillType.Survival] = 2.0,
+            _c[index_1.SkillType.Farming] = .6,
+            _c[index_1.SkillType.Stealth] = 1.7,
+            _c[index_1.SkillType.Piety] = .4,
+            _c[index_1.SkillType.Charm] = 1.0,
+            _c[index_1.SkillType.Intellect] = 1.2,
+            _c[index_1.SkillType.Combat] = 1.1,
             _c
         )),
         img: 'ranger.png',
-        hint: "Looking for a family that lets me sleep in the bed with them.",
+        hint: "Become an experienced Woodsman",
         criteria: classLevelUnlockFactory("Woodsman", 20),
     },
     {
-        name: 'Placeholder3',
+        name: 'Archer',
         aptitudes: index_1.mostlyUniformSkillMap(t2_apt, (_d = {},
             _d[index_1.SkillType.Survival] = .9,
             _d[index_1.SkillType.Farming] = .4,
@@ -96,13 +96,13 @@ exports.KLASSES = [
             _d
         )),
         img: 'archer.png',
-        hint: "Placeholder",
+        hint: "Score lots of crits",
         criteria: function (s) {
             return s.lifetimeSum(index_2.Stat.CriticalActions) / 500;
         }
     },
     {
-        name: 'Placeholder4',
+        name: 'Student',
         aptitudes: index_1.mostlyUniformSkillMap(baseline_apt, (_e = {},
             _e[index_1.SkillType.Intellect] = 1.2,
             _e[index_1.SkillType.Combat] = .8,
@@ -111,13 +111,13 @@ exports.KLASSES = [
             _e
         )),
         img: 'mage.png',
-        hint: "Placeholder",
+        hint: "Live an active life",
         criteria: function (s) {
             return s.current(index_2.Stat.ActionsTaken) / 1500;
         }
     },
     {
-        name: 'Placeholder5',
+        name: 'Assassin',
         aptitudes: index_1.mostlyUniformSkillMap(t2_apt, (_f = {},
             _f[index_1.SkillType.Stealth] = 2.0,
             _f[index_1.SkillType.Intellect] = 1.3,
@@ -128,13 +128,13 @@ exports.KLASSES = [
             _f
         )),
         img: 'assassin+female.png',
-        hint: "Placeholder",
+        hint: "Train your Stealth skill",
         criteria: function (s) {
             return s.checkSkillUnlock(index_1.SkillType.Stealth, med_skill_lvl);
         }
     },
     {
-        name: 'Placeholder6',
+        name: 'Cleric',
         aptitudes: index_1.mostlyUniformSkillMap(t2_apt, (_g = {},
             _g[index_1.SkillType.Piety] = 2.2,
             _g[index_1.SkillType.Combat] = 0.1,
@@ -145,13 +145,13 @@ exports.KLASSES = [
             _g
         )),
         img: 'white-mage.png',
-        hint: "Placeholder",
+        hint: "Live a life free from violence",
         criteria: function (s) {
             return s.unlocked(index_2.NamedUnlock.Pacifist);
         }
     },
     {
-        name: 'Placeholder7',
+        name: 'Berserker',
         aptitudes: index_1.mostlyUniformSkillMap(t1_apt, (_h = {},
             _h[index_1.SkillType.Combat] = 2.2,
             _h[index_1.SkillType.Charm] = .7,
@@ -162,7 +162,7 @@ exports.KLASSES = [
             _h
         )),
         img: 'berserker.png',
-        hint: "Placeholder",
+        hint: "Live a life full of violence",
         criteria: function (s) {
             /** TODO: Maybe criteria should be something like complete X actions
             in Y seconds? **/
@@ -171,7 +171,7 @@ exports.KLASSES = [
         }
     },
     {
-        name: 'Placeholder8',
+        name: 'Skeleton',
         aptitudes: index_1.mostlyUniformSkillMap(t1_apt + .1, (_j = {},
             _j[index_1.SkillType.Stealth] = .6,
             _j[index_1.SkillType.Piety] = .4,
@@ -180,13 +180,13 @@ exports.KLASSES = [
             _j
         )),
         img: 'skeleton.png',
-        hint: "Placeholder",
+        hint: "Clickety-clack go the spooky Skeleton bones",
         criteria: function (s) {
             return s.lifetimeSum(index_2.Stat.Clicks) / 400;
         }
     },
     {
-        name: 'Placeholder9',
+        name: 'Chocobone',
         aptitudes: index_1.mostlyUniformSkillMap(t3_apt, (_k = {},
             _k[index_1.SkillType.Stealth] = 0.1,
             _k[index_1.SkillType.Riding] = 2.0,
@@ -196,7 +196,7 @@ exports.KLASSES = [
             _k
         )),
         img: 'chocobone.png',
-        hint: 'Placeholder',
+        hint: 'Live a life as a Skeleton and a Jouster',
         criteria: function (s) {
             return (s.playerLevel('Skeleton') > 1)
                 && (s.playerLevel('Jouster') > 1);
@@ -210,7 +210,7 @@ exports.KLASSES = [
     mechanic.
     **/
     {
-        name: 'Placeholder10',
+        name: 'Jouster',
         aptitudes: index_1.mostlyUniformSkillMap(t2_apt, (_l = {},
             _l[index_1.SkillType.Stealth] = .5,
             _l[index_1.SkillType.Riding] = 3.0,
@@ -221,13 +221,13 @@ exports.KLASSES = [
             _l
         )),
         img: 'lancer.png',
-        hint: 'Placeholder',
+        hint: 'Beat the reigning jousting champion',
         criteria: function (s) {
             return s.unlocked(index_2.NamedUnlock.JoustingChampion);
         }
     },
     {
-        name: 'Placeholder11',
+        name: 'Gladiator',
         aptitudes: index_1.mostlyUniformSkillMap(t2_apt, (_m = {},
             _m[index_1.SkillType.Combat] = 2.0,
             _m[index_1.SkillType.Charm] = 2.0,
@@ -237,13 +237,13 @@ exports.KLASSES = [
             _m
         )),
         img: 'pikeman.png',
-        hint: "Placeholder",
+        hint: "Practice in the Colloseum",
         criteria: function (s) {
             return s.lifetimeSumActionsTaken('Colloseum') / 100;
         }
     },
     {
-        name: 'Placeholder12',
+        name: 'Scholar',
         aptitudes: index_1.mostlyUniformSkillMap(t2_apt, (_o = {},
             _o[index_1.SkillType.Intellect] = 2.0,
             _o[index_1.SkillType.Combat] = .4,
@@ -254,11 +254,11 @@ exports.KLASSES = [
             _o
         )),
         img: 'red-mage.png',
-        hint: "Placeholder",
+        hint: "Become an experienced Student",
         criteria: classLevelUnlockFactory("Student", 20),
     },
     {
-        name: 'Choc',
+        name: 'Blob',
         aptitudes: index_1.mostlyUniformSkillMap(t2_apt + .2, (_p = {},
             _p[index_1.SkillType.Riding] = .3,
             _p[index_1.SkillType.Charm] = .1,
@@ -268,13 +268,13 @@ exports.KLASSES = [
             _p
         )),
         img: 'mudcrawler.png',
-        hint: 'I like to take my time doing things slowwwllyy.',
+        hint: 'Complete a reeeeeeallly slow action',
         criteria: function (s) {
             return s.unlocked(index_2.NamedUnlock.SuperSlowAction);
         }
     },
     {
-        name: 'Placeholder13',
+        name: 'Shaman',
         aptitudes: index_1.mostlyUniformSkillMap(t2_apt, (_q = {},
             _q[index_1.SkillType.Farming] = 1.0,
             _q[index_1.SkillType.Intellect] = 1.7,
@@ -286,13 +286,13 @@ exports.KLASSES = [
             _q
         )),
         img: 'shaman.png',
-        hint: 'Placeholder',
+        hint: 'Reincarnate many times',
         criteria: function (s) {
             return s.lifetimeSum(index_2.Stat.Reincarnations) / 10;
         }
     },
     {
-        name: 'Placeholder14',
+        name: 'Juggler',
         aptitudes: index_1.mostlyUniformSkillMap(t2_apt, (_r = {},
             _r[index_1.SkillType.Farming] = 1.0,
             _r[index_1.SkillType.Intellect] = 1.3,
@@ -305,13 +305,13 @@ exports.KLASSES = [
             _r
         )),
         img: 'juggler.png',
-        hint: 'Placeholder',
+        hint: 'Grab three eggs in a row',
         criteria: function (s) {
             return s.unlocked(index_2.NamedUnlock.ThreeEggs);
         }
     },
     {
-        name: 'Pepper',
+        name: 'Horseman',
         aptitudes: index_1.mostlyUniformSkillMap(t1_apt, (_s = {},
             _s[index_1.SkillType.Riding] = 2.2,
             _s[index_1.SkillType.Combat] = 1.3,
@@ -321,7 +321,7 @@ exports.KLASSES = [
             _s
         )),
         img: 'horseman.png',
-        hint: "Placeholder",
+        hint: "Show great stability",
         criteria: function (s) {
             return s.lifetimeSumActionsTaken('Stables') / 1000;
         }
