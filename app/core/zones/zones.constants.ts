@@ -11,12 +11,12 @@ let FLOWERS = ["poppies", "daisies", "roses", "orchids", "violets", "begonias"];
 
 export const SUPERZONEDATA: SuperZoneData[] = [
 {
-name: 'Fields',
+name: 'Apt 3401',
 minLevel: 0,
 zones:
 [
     {
-        name: 'Turnip Farm',
+        name: 'Living Room',
         description: `A good place for apprentice farmers to learn the ways of
             the land - turnips are a pretty forgiving crop.`,
         actions: [
