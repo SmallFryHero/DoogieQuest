@@ -311,30 +311,30 @@ var PASSIVES;
         return ArcherPerk;
     }(MetadataPassive));
     PASSIVES.ArcherPerk = ArcherPerk;
-    var PeasantPerk = (function (_super) {
-        __extends(PeasantPerk, _super);
-        function PeasantPerk() {
+    var DooglerPerk = (function (_super) {
+        __extends(DooglerPerk, _super);
+        function DooglerPerk() {
             _super.apply(this, arguments);
             this.diTokens = [di_tokens_1.di_tokens.playerservice];
         }
-        PeasantPerk.prototype.onCast = function (PS) {
+        DooglerPerk.prototype.onCast = function (PS) {
             var _this = this;
             this.PS = PS;
             this.sub = PS.playerLevel$.subscribe(function (level) {
-                _this.active = level < PeasantPerk.levelThreshold;
+                _this.active = level < DooglerPerk.levelThreshold;
             });
         };
-        PeasantPerk.prototype.onActivate = function () {
+        DooglerPerk.prototype.onActivate = function () {
             var apts = this.PS.getBaseAptitudes();
-            this.aptitudeBuffs = apts.map(function (apt) { return apt * PeasantPerk.aptMultiplier; });
+            this.aptitudeBuffs = apts.map(function (apt) { return apt * DooglerPerk.aptMultiplier; });
             this.PS.buffAptitudes(this.aptitudeBuffs);
         };
-        PeasantPerk.prototype.onDeactivate = function () {
-            console.log("Peasant perk going away now");
+        DooglerPerk.prototype.onDeactivate = function () {
+            console.log("Doogler perk going away now");
             this.sub.unsubscribe();
             this.PS.debuffAptitudes(this.aptitudeBuffs);
         };
-        PeasantPerk.prototype.cleanUp = function () {
+        DooglerPerk.prototype.cleanUp = function () {
             var args = [];
             for (var _i = 0; _i < arguments.length; _i++) {
                 args[_i - 0] = arguments[_i];
@@ -345,16 +345,16 @@ var PASSIVES;
         };
         // TODO: wish there was a way I could get the compiler to bug me if
         // name/desc isn't given (i.e. make them "abstract" properties)
-        PeasantPerk.sname = "Underdog";
-        PeasantPerk.levelThreshold = 10;
-        PeasantPerk.aptMultiplier = 3.0;
+        DooglerPerk.sname = "Underdog";
+        DooglerPerk.levelThreshold = 10;
+        DooglerPerk.aptMultiplier = 3.0;
         // TODO: Is it possible to store a string property that uses something like
         // angular's templating syntax, and sort of 'eval' that in a template?
         // In particular, it'd be nice to be able to use pipes here.
-        PeasantPerk.sdescription = "Base aptitudes increased by " + PeasantPerk.aptMultiplier * 100 + "% until level " + PeasantPerk.levelThreshold;
-        return PeasantPerk;
+        DooglerPerk.sdescription = "Base aptitudes increased by " + DooglerPerk.aptMultiplier * 100 + "% until level " + DooglerPerk.levelThreshold;
+        return DooglerPerk;
     }(OnOffPerk));
-    PASSIVES.PeasantPerk = PeasantPerk;
+    PASSIVES.DooglerPerk = DooglerPerk;
     var GladiatorPerk = (function (_super) {
         __extends(GladiatorPerk, _super);
         function GladiatorPerk() {
