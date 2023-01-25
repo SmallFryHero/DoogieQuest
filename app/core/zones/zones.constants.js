@@ -14,8 +14,8 @@ exports.SUPERZONEDATA = [
                 name: 'Living Room',
                 description: "A big scary room where you can get attacked from three point of entries.",
                 actions: [
-                    { obj: "Cowering in safe bed.", skills: index_1.SkillType.Cower },
-                    { vb: "", obj: "Taking a poop on the carpet while everyones asleep.", skills: index_1.SkillType.Pee, bonusLevel: 1 },
+                    { vb: "cower", obj: " in safe bed.", skills: index_1.SkillType.Cower },
+                    { vb: "take", obj: " a poop on the carpet while everyones asleep.", skills: index_1.SkillType.Pee, bonusLevel: 1 },
                 ],
                 difficulty: 0,
             },
@@ -23,11 +23,11 @@ exports.SUPERZONEDATA = [
                 name: 'Bedroom',
                 description: "A cozy place to hide from the world.",
                 actions: [
-                    { vb: "", obj: "Chilling in bed with Gina.",
+                    { vb: "chill", obj: "in bed with Gina.",
                         skills: index_1.SkillType.Cuddle, weight: .8 },
-                    { vb: "", obj: "Playing with my toy.", 
+                    { vb: "play", obj: " with my toy.", 
                         skills: index_1.SkillType.Play, weight: .2 },
-                    { vb: "", obj: "Who the hell is that!?", oneShot: action_oneshots_enum_1.OneShotAction.WoodsmanFreed,
+                    { vb: "wait", obj: " the hell is that!?", oneShot: action_oneshots_enum_1.OneShotAction.WoodsmanFreed,
                         bonusLevel: 2, skills: index_1.SkillType.Survival }
                 ],
                 difficulty: 1,
