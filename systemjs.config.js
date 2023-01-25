@@ -50,7 +50,7 @@
   var config = {
     map: map,
     packages: packages,
-    baseURL: '/tour-of-heroes/'
+    baseURL: '/DoogieQuest/'
   };
   System.config(config);
 })(this);
