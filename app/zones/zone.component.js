@@ -56,7 +56,7 @@ var ZoneComponent = (function () {
     ZoneComponent.prototype.masteryIncreasePerZoneLevel = function () {
         return Math.ceil(globals_1.GLOBALS.difficultyBonusPerZoneLevel * index_1.XpFormulas.benchmarkSkillLevelForPlevel(1));
     };
-    // this kind of sucks. Would like it if we could just create a new component
+    // this kind of sucks. Would like it if we could just create a new components
     // every time the zone changes
     ZoneComponent.prototype.ngOnChanges = function (changes) {
         var _this = this;
